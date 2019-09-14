@@ -1,0 +1,454 @@
+/* line 1, ../sass/master.sass */
+html {
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  font-weight: bold;
+  margin: 0;
+}
+
+/* line 7, ../sass/master.sass */
+body {
+  background: #5dc9d3;
+  margin: 0;
+}
+
+/* line 11, ../sass/master.sass */
+#background-wrapper {
+  width: 825px;
+  margin: 0 auto;
+  background: #5ec8d5 url(../images/ten-top-background.jpg) top center repeat-x;
+}
+
+/* line 16, ../sass/master.sass */
+#wrapper {
+  padding: 0 3% 10% 3%;
+  margin: 1% auto 0 auto;
+  width: 440px;
+  height: 100%;
+  background: black url(../images/background_pattern.jpg) top center repeat;
+  border: white solid 4pt;
+}
+
+/* line 24, ../sass/master.sass */
+#logo {
+  padding: 1%;
+  margin: 0 auto;
+  width: 100%;
+  text-align: center;
+}
+
+/* line 29, ../sass/master.sass */
+#logo.img {
+  margin: auto auto;
+  padding: 0;
+  width: 227px;
+}
+
+/* line 34, ../sass/master.sass */
+.underline {
+  margin: auto auto;
+  padding: 0;
+  width: 350px;
+}
+
+/* line 39, ../sass/master.sass */
+h1 {
+  font-size: 48pt;
+  color: white;
+  font-family: "Righteous", cursive;
+  text-transform: lowercase;
+  text-align: center;
+  line-height: 48pt;
+  margin-bottom: 2%;
+  margin-top: 5%;
+}
+
+/* line 49, ../sass/master.sass */
+#title-line-two {
+  display: block;
+}
+
+/* line 52, ../sass/master.sass */
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 56, ../sass/master.sass */
+p {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 60, ../sass/master.sass */
+p a:link,
+p a:visited {
+  color: white;
+  text-decoration: none;
+}
+
+/* line 63, ../sass/master.sass */
+p a:hover {
+  color: white;
+  text-decoration: none;
+  color: #5dc9d3;
+}
+
+/* line 68, ../sass/master.sass */
+.appleDevice,
+.gc-cs-link {
+  color: white;
+  text-decoration: none;
+}
+
+/* line 73, ../sass/master.sass */
+span.appleDevice,
+span.gc-cs-link {
+  color: white;
+  text-decoration: none;
+}
+
+/* line 77, ../sass/master.sass */
+.appleDevice a,
+.gc-cs-link a {
+  color: white;
+  text-decoration: none;
+}
+
+/************************************************ */
+/************************************************ */
+/************************************************ */
+/* line 85, ../sass/master.sass */
+#address {
+  clear: both;
+  width: 100%;
+  margin: 2% auto 0 auto;
+  text-align: center;
+}
+
+/* line 90, ../sass/master.sass */
+#address p {
+  font-size: 14pt;
+}
+
+/************************************************ */
+/* line 95, ../sass/master.sass */
+.twitter-timeline,
+.tagline {
+  font-family: times, serif;
+  font-style: italic;
+  font-size: 11pt;
+  width: 100%;
+  margin: 3% auto;
+  text-align: center;
+}
+
+/************************************************ */
+/* line 105, ../sass/master.sass */
+#phone {
+  width: 100%;
+  margin: 0 auto 3% auto;
+  text-align: center;
+}
+
+/************************************************ */
+/* line 112, ../sass/master.sass */
+#hours {
+  width: 100%;
+  margin: 3% auto 3% auto;
+  text-align: center;
+}
+
+/* line 117, ../sass/master.sass */
+#delivery {
+  margin: auto auto;
+  width: 75%;
+  font-size: 10pt;
+  font-weight: normal;
+}
+
+/************************************************ */
+/* line 125, ../sass/master.sass */
+.twitter-feed {
+  margin: auto auto 2% auto;
+  width: auto;
+  height: 500px;
+  overflow-y: scroll;
+}
+
+/************************************************ */
+/* line 131, ../sass/master.sass */
+#visit-us {
+  width: 100%;
+  margin: 4% auto 3% auto;
+  font-size: 9pt;
+  font-weight: normal;
+  text-align: center;
+}
+
+/************************************************ */
+/************************************************ */
+/************************************************ */
+/************************************************ */
+/* line 143, ../sass/master.sass */
+#menus-wrapper {
+  float: right;
+  width: 100%;
+}
+
+/* line 147, ../sass/master.sass */
+#menus {
+  float: right;
+  position: relative;
+  left: -50%;
+  text-align: left;
+}
+
+/* line 148, ../sass/master.sass */
+#menus ul {
+  list-style: none;
+  position: relative;
+  left: 50%;
+}
+
+/* line 149, ../sass/master.sass */
+#menus ul li {
+  font-family: "Doppio One", sans-serif;
+  text-transform: uppercase;
+  line-height: 8pt;
+  padding: 0;
+  margin: 0;
+  margin-top: 3%;
+}
+
+/* line 163, ../sass/master.sass */
+#menus li {
+  float: left;
+  position: relative;
+}
+
+/* line 166, ../sass/master.sass */
+#menus li a {
+  text-decoration: none;
+  margin: 0 10px 10px 10px;
+  font-size: 1.4em;
+  float: left;
+  color: white;
+  padding: 0 5px 2px 5px;
+  text-align: center;
+  white-space: nowrap;
+}
+
+/* line 175, ../sass/master.sass */
+#menus li a:hover {
+  color: #5dc9d3;
+}
+
+/************************************************ */
+/************************************************ */
+/************************************************ */
+/* line 182, ../sass/master.sass */
+#social-wrapper {
+  clear: both;
+  width: 100%;
+}
+
+/* line 186, ../sass/master.sass */
+#social {
+  float: right;
+  position: relative;
+  left: -50%;
+  text-align: left;
+}
+
+/* line 191, ../sass/master.sass */
+#social ul {
+  list-style: none;
+  position: relative;
+  left: 50%;
+}
+
+/* line 195, ../sass/master.sass */
+#social li {
+  float: left;
+  position: relative;
+  padding-right: 10px;
+}
+
+/* line 199, ../sass/master.sass */
+#social a img {
+  border: none;
+}
+
+/* line 202, ../sass/master.sass */
+img {
+  border-style: none;
+}
+
+/* line 205, ../sass/master.sass */
+.clear-fix {
+  clear: both;
+}
+
+/************************************************ */
+/************************************************ */
+/************************************************ */
+/* line 212, ../sass/master.sass */
+footer {
+  background: #5dc9d3;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  font-size: 0.75em;
+  font-weight: normal;
+  padding: 8px 3% 0 3%;
+  margin: 0 auto 1% auto;
+  width: 440px;
+  text-align: center;
+}
+
+/* line 223, ../sass/master.sass */
+#rights-reserved {
+  padding-right: 3%;
+}
+
+/* line 227, ../sass/master.sass */
+footer #footer-address {
+  font-weight: normal;
+  padding: 1% 3% 0 3%;
+  margin: 1pt auto auto;
+  text-align: center;
+}
+
+/* line 232, ../sass/master.sass */
+footer a {
+  text-decoration: none;
+  color: white;
+}
+
+/* line 235, ../sass/master.sass */
+footer a:hover {
+  color: #eeeeee;
+}
+
+/************************************************ */
+/**********************EOF*********************** */
+/************************************************ */
+/* Smartphones (portrait) ----------- */
+@media only screen and (max-width: 480px) {
+
+  /* line 1, ../sass/mobile.sass */
+  html {
+    background: black url(../images/background_pattern.jpg) top center repeat;
+  }
+
+  /* line 4, ../sass/mobile.sass */
+  body {
+    background: black url(../images/background_pattern.jpg) top center repeat;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* line 10, ../sass/mobile.sass */
+  #main {
+    min-width: 350px;
+    padding: 0 1rem;
+    margin: auto auto;
+    background-color: transparent;
+  }
+
+  /* line 16, ../sass/mobile.sass */
+  #background-wrapper,
+  #wrapper {
+    width: auto;
+    border: none;
+    background: black url(../images/background_pattern.jpg) top center repeat;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* line 23, ../sass/mobile.sass */
+  h1 {
+    font-size: 42pt;
+  }
+
+  /* line 26, ../sass/mobile.sass */
+  #title-line-two {
+    display: inline;
+  }
+
+  /* line 29, ../sass/mobile.sass */
+  #menus-wrapper {
+    min-width: 350px;
+  }
+
+  /* line 32, ../sass/mobile.sass */
+  #menus li a {
+    margin: 0 10px 10px 10px;
+    font-size: 1.2em;
+    float: left;
+    color: white;
+    padding: 0 5px 2px 5px;
+    text-align: center;
+    white-space: nowrap;
+  }
+
+  /* line 41, ../sass/mobile.sass */
+  #logo {
+    width: auto;
+  }
+
+  /* line 44, ../sass/mobile.sass */
+  #social {
+    background-color: transparent;
+  }
+
+  /* line 47, ../sass/mobile.sass */
+  footer {
+    background-color: transparent;
+    font-size: 0.3em;
+    font-weight: normal;
+    width: auto;
+    margin: auto auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+
+  /* line 57, ../sass/mobile.sass */
+  #rights-reserved {
+    padding: 0;
+  }
+
+  /* line 61, ../sass/mobile.sass */
+  footer #footer-address {
+    padding: 0;
+    font-weight: normal;
+    text-align: center;
+  }
+
+  /* line 65, ../sass/mobile.sass */
+  footer a {
+    text-decoration: none;
+    color: white;
+  }
+
+  /* line 68, ../sass/mobile.sass */
+  footer a:hover {
+    color: #eeeeee;
+  }
+}
+
+@font-face {
+  font-family: "Righteous";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Righteous"), local("Righteous-Regular"), url(http://themes.googleusercontent.com/static/fonts/righteous/v2/w5P-SI7QJQSDqB3GziL8XbO3LdcAZYWl9Si6vvxL-qU.woff) format("woff");
+}
+
+@font-face {
+  font-family: "Doppio One";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Doppio One Regular"), local("DoppioOne-Regular"), url(http://themes.googleusercontent.com/static/fonts/doppioone/v1/DGr_HuCg-_zePcleoqvEX73hpw3pgy2gAi-Ip7WPMi0.woff) format("woff");
+}
