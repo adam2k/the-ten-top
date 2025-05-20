@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+Allow: /menus/
+Allow: /images/
+Disallow: /cgi-bin/
+Disallow: /tmp/
+Disallow: /private/
+
+# Sitemap location
+Sitemap: http://thetentop.com/sitemap.xml
