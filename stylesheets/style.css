@@ -1,4 +1,9 @@
-/* line 1, ../sass/master.sass */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 html {
   font-family: Arial, Helvetica, sans-serif;
   color: white;
@@ -14,7 +19,8 @@ body {
 
 /* line 11, ../sass/master.sass */
 #background-wrapper {
-  width: 825px;
+  width: 100%;
+  max-width: 825px;
   margin: 0 auto;
   background-color: #5ec8d5;
   background-image: image-set(
@@ -27,9 +33,10 @@ body {
 
 /* line 16, ../sass/master.sass */
 #wrapper {
-  padding: 0 3% 10% 3%;
+  padding: 0 3% 3%;
   margin: 1% auto 0 auto;
-  width: 440px;
+  width: 100%;
+  max-width: 440px;
   height: 100%;
   background: #0d0d0d;
   border: white solid 4pt;
@@ -51,7 +58,8 @@ body {
 }
 
 .underline {
-  width: 350px;
+  width: 90%;
+  max-width: 350px;
   height: 4px;
   margin: 0.6em auto;
   background: rgba(245, 242, 228, 0.72);
@@ -128,7 +136,6 @@ span.gc-cs-link {
 /************************************************ */
 /* line 85, ../sass/master.sass */
 #address {
-  clear: both;
   width: 100%;
   margin: 2% auto 0 auto;
   text-align: center;
@@ -180,7 +187,7 @@ span.gc-cs-link {
 .feed {
   margin: auto auto 2% auto;
   width: auto;
-  height: 500px;
+  min-height: 422px;
   overflow-y: scroll;
 }
 
@@ -236,37 +243,24 @@ span.gc-cs-link {
 /************************************************ */
 /************************************************ */
 /************************************************ */
-/* line 182, ../sass/master.sass */
 #social-wrapper {
-  clear: both;
   width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
-/* line 186, ../sass/master.sass */
-#social {
-  float: right;
-  position: relative;
-  left: -50%;
-  text-align: left;
-}
-
-/* line 191, ../sass/master.sass */
 #social ul {
   list-style: none;
-  position: relative;
-  left: 50%;
+  display: flex;
+  gap: 0.75rem;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
 }
 
-/* line 195, ../sass/master.sass */
-#social li {
-  float: left;
-  position: relative;
-  padding-right: 10px;
-}
-
-/* line 199, ../sass/master.sass */
 #social a img {
   border: none;
+  display: block;
 }
 
 /* line 202, ../sass/master.sass */
@@ -274,10 +268,6 @@ img {
   border-style: none;
 }
 
-/* line 205, ../sass/master.sass */
-.clear-fix {
-  clear: both;
-}
 
 /************************************************ */
 /************************************************ */
@@ -289,9 +279,10 @@ footer {
   color: white;
   font-size: 0.75em;
   font-weight: normal;
-  padding: 8px 3% 0 3%;
+  padding: 8px 3% 8px 3%;
   margin: 0 auto 1% auto;
-  width: 440px;
+  width: 100%;
+  max-width: 440px;
   text-align: center;
 }
 
@@ -339,14 +330,15 @@ footer a:hover {
   }
 
   #main {
-    min-width: 350px;
+    width: 100%;
     padding: 0 1rem;
-    margin: auto auto;
+    margin: 0 auto;
   }
 
   #background-wrapper,
   #wrapper {
-    width: auto;
+    width: 100%;
+    max-width: 100%;
     border: none;
     margin: 0;
     padding: 0;
