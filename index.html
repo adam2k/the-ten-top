@@ -23,6 +23,18 @@
 </head>
 
 <body>
+  <!-- SVG filter for chalk-line effect on .underline dividers -->
+  <svg width="0" height="0" aria-hidden="true" style="position:absolute;overflow:hidden">
+    <defs>
+      <filter id="chalk-line" x="-5%" y="-100%" width="110%" height="300%">
+        <feTurbulence type="turbulence" baseFrequency="0.04 0.15" numOctaves="4" seed="7" result="noise"/>
+        <feDisplacementMap in="SourceGraphic" in2="noise" scale="3" xChannelSelector="R" yChannelSelector="G" result="displaced"/>
+        <feComponentTransfer in="displaced">
+          <feFuncA type="table" tableValues="0 0.6 0.9 0.7 1 0.8 0.95 0.65 1"/>
+        </feComponentTransfer>
+      </filter>
+    </defs>
+  </svg>
   <div id="main">
     <div id="background-wrapper">
       <div id="wrapper">
@@ -30,9 +42,7 @@
           <h1>the <span id="title-line-two">ten top</span></h1>
         </div><!-- logo -->
 
-        <div class="underline">
-          <img src="images/underline.jpg" width="350" height="13" alt="" loading="lazy">
-        </div><!-- .underline -->
+        <div class="underline"></div>
 
         <div id="menus-wrapper">
           <div id="menus">
@@ -48,9 +58,7 @@
           </div><!-- #menus -->
         </div><!-- #menus-wrapper -->
 
-        <div class="underline">
-          <img src="images/underline.jpg" width="350" height="13" alt="" loading="lazy">
-        </div><!-- .underline -->
+        <div class="underline"></div>
 
         <div id="address">
           <p><a
