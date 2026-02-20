@@ -1,4 +1,9 @@
-/* line 1, ../sass/master.sass */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 html {
   font-family: Arial, Helvetica, sans-serif;
   color: white;
@@ -14,18 +19,26 @@ body {
 
 /* line 11, ../sass/master.sass */
 #background-wrapper {
-  width: 825px;
+  width: 100%;
+  max-width: 825px;
   margin: 0 auto;
-  background: #5ec8d5 url(../images/ten-top-background.jpg) top center repeat-x;
+  background-color: #5ec8d5;
+  background-image: image-set(
+    url(../images/ten-top-background.webp) type("image/webp"),
+    url(../images/ten-top-background.jpg) type("image/jpeg")
+  );
+  background-position: top center;
+  background-repeat: repeat-x;
 }
 
 /* line 16, ../sass/master.sass */
 #wrapper {
-  padding: 0 3% 10% 3%;
+  padding: 0 3% 3%;
   margin: 1% auto 0 auto;
-  width: 440px;
+  width: 100%;
+  max-width: 440px;
   height: 100%;
-  background: black url(../images/background_pattern.jpg) top center repeat;
+  background: #0d0d0d;
   border: white solid 4pt;
 }
 
@@ -44,11 +57,14 @@ body {
   width: 227px;
 }
 
-/* line 34, ../sass/master.sass */
 .underline {
-  margin: auto auto;
-  padding: 0;
-  width: 350px;
+  width: 90%;
+  max-width: 350px;
+  height: 4px;
+  margin: 0.6em auto;
+  background: rgba(245, 242, 228, 0.72);
+  border-radius: 2px;
+  filter: url('#chalk-line');
 }
 
 /* line 39, ../sass/master.sass */
@@ -120,7 +136,6 @@ span.gc-cs-link {
 /************************************************ */
 /* line 85, ../sass/master.sass */
 #address {
-  clear: both;
   width: 100%;
   margin: 2% auto 0 auto;
   text-align: center;
@@ -172,7 +187,7 @@ span.gc-cs-link {
 .feed {
   margin: auto auto 2% auto;
   width: auto;
-  height: 500px;
+  min-height: 422px;
   overflow-y: scroll;
 }
 
@@ -190,56 +205,37 @@ span.gc-cs-link {
 /************************************************ */
 /************************************************ */
 /************************************************ */
-/* line 143, ../sass/master.sass */
 #menus-wrapper {
-  float: right;
   width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
-/* line 147, ../sass/master.sass */
-#menus {
-  float: right;
-  position: relative;
-  left: -50%;
-  text-align: left;
-}
-
-/* line 148, ../sass/master.sass */
 #menus ul {
   list-style: none;
-  position: relative;
-  left: 50%;
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
 }
 
-/* line 149, ../sass/master.sass */
 #menus ul li {
   font-family: "Doppio One", sans-serif;
   text-transform: uppercase;
-  line-height: 8pt;
   padding: 0;
   margin: 0;
-  margin-top: 3%;
 }
 
-/* line 163, ../sass/master.sass */
-#menus li {
-  float: left;
-  position: relative;
-}
-
-/* line 166, ../sass/master.sass */
 #menus li a {
   text-decoration: none;
-  margin: 0 10px 10px 10px;
   font-size: 1.4em;
-  float: left;
   color: white;
   padding: 0 5px 2px 5px;
-  text-align: center;
   white-space: nowrap;
+  display: inline-block;
 }
 
-/* line 175, ../sass/master.sass */
 #menus li a:hover {
   color: #5dc9d3;
 }
@@ -247,37 +243,24 @@ span.gc-cs-link {
 /************************************************ */
 /************************************************ */
 /************************************************ */
-/* line 182, ../sass/master.sass */
 #social-wrapper {
-  clear: both;
   width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
-/* line 186, ../sass/master.sass */
-#social {
-  float: right;
-  position: relative;
-  left: -50%;
-  text-align: left;
-}
-
-/* line 191, ../sass/master.sass */
 #social ul {
   list-style: none;
-  position: relative;
-  left: 50%;
+  display: flex;
+  gap: 0.75rem;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
 }
 
-/* line 195, ../sass/master.sass */
-#social li {
-  float: left;
-  position: relative;
-  padding-right: 10px;
-}
-
-/* line 199, ../sass/master.sass */
 #social a img {
   border: none;
+  display: block;
 }
 
 /* line 202, ../sass/master.sass */
@@ -285,10 +268,6 @@ img {
   border-style: none;
 }
 
-/* line 205, ../sass/master.sass */
-.clear-fix {
-  clear: both;
-}
 
 /************************************************ */
 /************************************************ */
@@ -300,9 +279,10 @@ footer {
   color: white;
   font-size: 0.75em;
   font-weight: normal;
-  padding: 8px 3% 0 3%;
+  padding: 8px 3% 8px 3%;
   margin: 0 auto 1% auto;
-  width: 440px;
+  width: 100%;
+  max-width: 440px;
   text-align: center;
 }
 
@@ -336,33 +316,30 @@ footer a:hover {
 /* Smartphones (portrait) ----------- */
 @media only screen and (max-width: 480px) {
 
-  /* line 1, ../sass/mobile.sass */
-  html {
-    background: black url(../images/background_pattern.jpg) top center repeat;
+  html,
+  body,
+  #background-wrapper,
+  #wrapper {
+    background: #0d0d0d;
   }
 
-  /* line 4, ../sass/mobile.sass */
   body {
-    background: black url(../images/background_pattern.jpg) top center repeat;
     width: 100%;
     margin: 0;
     padding: 0;
   }
 
-  /* line 10, ../sass/mobile.sass */
   #main {
-    min-width: 350px;
+    width: 100%;
     padding: 0 1rem;
-    margin: auto auto;
-    background-color: transparent;
+    margin: 0 auto;
   }
 
-  /* line 16, ../sass/mobile.sass */
   #background-wrapper,
   #wrapper {
-    width: auto;
+    width: 100%;
+    max-width: 100%;
     border: none;
-    background: black url(../images/background_pattern.jpg) top center repeat;
     margin: 0;
     padding: 0;
   }
@@ -377,16 +354,8 @@ footer a:hover {
     display: inline;
   }
 
-  /* line 29, ../sass/mobile.sass */
-  #menus-wrapper {
-    min-width: 350px;
-  }
-
-  /* line 32, ../sass/mobile.sass */
   #menus li a {
-    margin: 0 10px 10px 10px;
     font-size: 1.2em;
-    float: left;
     color: white;
     padding: 0 5px 2px 5px;
     text-align: center;
