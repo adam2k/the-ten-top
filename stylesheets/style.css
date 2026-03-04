@@ -33,13 +33,15 @@ body {
 
 /* line 16, ../sass/master.sass */
 #wrapper {
-  padding: 0 3% 3%;
+  display: block;
+  padding: 0 24px 12px;
   margin: 1% auto 0 auto;
   width: 100%;
-  max-width: 440px;
+  max-width: 500px;
   height: 100%;
   background: #0d0d0d;
   border: white solid 4pt;
+  overflow: hidden;
 }
 
 /* line 24, ../sass/master.sass */
@@ -137,18 +139,22 @@ span.gc-cs-link {
 /* line 85, ../sass/master.sass */
 #address {
   width: 100%;
-  margin: 2% auto 0 auto;
+  margin: 2rem auto 0 auto;
   text-align: center;
 }
 
 /* line 90, ../sass/master.sass */
 #address p {
+  font-size: 16pt;
+}
+
+#hours p,
+#phone p {
   font-size: 14pt;
 }
 
 /************************************************ */
 /* line 95, ../sass/master.sass */
-.twitter-timeline,
 .tagline {
   font-family: times, serif;
   font-style: italic;
@@ -158,11 +164,21 @@ span.gc-cs-link {
   text-align: center;
 }
 
+.tagline a:link,
+.tagline a:visited {
+  color: white;
+  text-decoration: underline;
+}
+
+.tagline a:hover {
+  color: #5dc9d3;
+}
+
 /************************************************ */
 /* line 105, ../sass/master.sass */
 #phone {
   width: 100%;
-  margin: 0 auto 3% auto;
+  margin: 0 auto 1.75rem auto;
   text-align: center;
 }
 
@@ -185,20 +201,20 @@ span.gc-cs-link {
 /************************************************ */
 /* line 125, ../sass/master.sass */
 .feed {
-  margin: auto auto 2% auto;
+  display: block;
+  margin: auto auto;
   width: auto;
-  min-height: 422px;
-  overflow-y: scroll;
+  overflow: hidden;
 }
 
 /************************************************ */
 /* line 131, ../sass/master.sass */
 #visit-us {
   width: 100%;
-  margin: 4% auto 3% auto;
   font-size: 9pt;
   font-weight: normal;
   text-align: center;
+  padding-left: 0.25rem;
 }
 
 /************************************************ */
@@ -282,13 +298,13 @@ footer {
   padding: 8px 3% 8px 3%;
   margin: 0 auto 1% auto;
   width: 100%;
-  max-width: 440px;
+  max-width: 500px;
   text-align: center;
 }
 
 /* line 223, ../sass/master.sass */
 #rights-reserved {
-  padding-right: 3%;
+  padding: 0 0.25rem 0 0;
 }
 
 /* line 227, ../sass/master.sass */
@@ -382,11 +398,6 @@ footer a:hover {
     margin-top: 10px;
     margin-bottom: 10px;
     text-align: center;
-  }
-
-  /* line 57, ../sass/mobile.sass */
-  #rights-reserved {
-    padding: 0;
   }
 
   /* line 61, ../sass/mobile.sass */
