@@ -11,13 +11,48 @@ html {
   margin: 0;
 }
 
-/* line 7, ../sass/master.sass */
 body {
   background: #5dc9d3;
   margin: 0;
 }
 
-/* line 11, ../sass/master.sass */
+/* ── Skip link (keyboard accessibility) ── */
+.skip-link {
+  position: absolute;
+  top: -44px;
+  left: 0;
+  background: #0d0d0d;
+  color: #fff;
+  padding: 8px 12px;
+  z-index: 9999;
+  font-size: 0.875rem;
+  text-decoration: none;
+  transition: top 0.1s;
+}
+
+.skip-link:focus-visible {
+  top: 0;
+}
+
+/* ── Screen-reader-only utility ── */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* ── Keyboard focus indicator ── */
+:focus-visible {
+  outline: 2px solid #5dc9d3;
+  outline-offset: 3px;
+}
+
 #background-wrapper {
   width: 100%;
   max-width: 825px;
@@ -31,32 +66,22 @@ body {
   background-repeat: repeat-x;
 }
 
-/* line 16, ../sass/master.sass */
 #wrapper {
   display: block;
   padding: 0 24px 12px;
   margin: 1% auto 0 auto;
   width: 100%;
   max-width: 500px;
-  height: 100%;
   background: #0d0d0d;
   border: white solid 4pt;
   overflow: hidden;
 }
 
-/* line 24, ../sass/master.sass */
 #logo {
   padding: 1%;
   margin: 0 auto;
   width: 100%;
   text-align: center;
-}
-
-/* line 29, ../sass/master.sass */
-#logo.img {
-  margin: auto auto;
-  padding: 0;
-  width: 227px;
 }
 
 .underline {
@@ -69,7 +94,6 @@ body {
   filter: url('#chalk-line');
 }
 
-/* line 39, ../sass/master.sass */
 h1 {
   font-size: 48pt;
   color: white;
@@ -81,80 +105,73 @@ h1 {
   margin-top: 5%;
 }
 
-/* line 49, ../sass/master.sass */
 #title-line-two {
   display: block;
 }
 
-/* line 52, ../sass/master.sass */
 ul {
   margin: 0;
   padding: 0;
 }
 
-/* line 56, ../sass/master.sass */
 p {
   margin: 0;
   padding: 0;
 }
 
-/* line 60, ../sass/master.sass */
 p a:link,
 p a:visited {
   color: white;
   text-decoration: none;
 }
 
-/* line 63, ../sass/master.sass */
 p a:hover {
-  color: white;
-  text-decoration: none;
   color: #5dc9d3;
+  text-decoration: none;
 }
 
-/* line 68, ../sass/master.sass */
 .appleDevice,
 .gc-cs-link {
   color: white;
   text-decoration: none;
 }
 
-/* line 73, ../sass/master.sass */
 span.appleDevice,
 span.gc-cs-link {
   color: white;
   text-decoration: none;
 }
 
-/* line 77, ../sass/master.sass */
-.appleDevice a,
-.gc-cs-link a {
-  color: white;
-  text-decoration: none;
-}
-
-/************************************************ */
-/************************************************ */
-/************************************************ */
-/* line 85, ../sass/master.sass */
+/* ── Contact info block ── */
 #address {
   width: 100%;
   margin: 2rem auto 0 auto;
   text-align: center;
 }
 
-/* line 90, ../sass/master.sass */
-#address p {
+address {
+  font-style: normal;
+}
+
+#address > p:first-child {
   font-size: 16pt;
 }
 
-#hours p,
-#phone p {
+#hours {
   font-size: 14pt;
+  width: 100%;
+  margin: 3% auto;
+  text-align: center;
 }
 
-/************************************************ */
-/* line 95, ../sass/master.sass */
+#phone {
+  font-size: 14pt;
+  width: 100%;
+  margin: 0 auto 1.75rem;
+  text-align: center;
+}
+
+/* ── Tagline ── */
 .tagline {
   font-family: times, serif;
   font-style: italic;
@@ -174,52 +191,15 @@ span.gc-cs-link {
   color: #5dc9d3;
 }
 
-/************************************************ */
-/* line 105, ../sass/master.sass */
-#phone {
-  width: 100%;
-  margin: 0 auto 1.75rem auto;
-  text-align: center;
-}
-
-/************************************************ */
-/* line 112, ../sass/master.sass */
-#hours {
-  width: 100%;
-  margin: 3% auto 3% auto;
-  text-align: center;
-}
-
-/* line 117, ../sass/master.sass */
-#delivery {
-  margin: auto auto;
-  width: 75%;
-  font-size: 10pt;
-  font-weight: normal;
-}
-
-/************************************************ */
-/* line 125, ../sass/master.sass */
+/* ── Instagram feed section ── */
 .feed {
   display: block;
-  margin: auto auto;
+  margin: auto;
   width: auto;
   overflow: hidden;
 }
 
-/************************************************ */
-/* line 131, ../sass/master.sass */
-#visit-us {
-  width: 100%;
-  font-weight: normal;
-  text-align: center;
-  padding-left: 0.25rem;
-}
-
-/************************************************ */
-/************************************************ */
-/************************************************ */
-/************************************************ */
+/* ── Menus nav ── */
 #menus-wrapper {
   width: 100%;
   display: flex;
@@ -255,82 +235,55 @@ span.gc-cs-link {
   color: #5dc9d3;
 }
 
-/************************************************ */
-/************************************************ */
-/************************************************ */
-#social-wrapper {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
-
-#social ul {
-  list-style: none;
-  display: flex;
-  gap: 0.75rem;
-  justify-content: center;
-  padding: 0;
-  margin: 0;
-}
-
-#social a img {
-  border: none;
-  display: block;
-}
-
-/* line 202, ../sass/master.sass */
 img {
   border-style: none;
 }
 
-
-/************************************************ */
-/************************************************ */
-/************************************************ */
-/* line 212, ../sass/master.sass */
+/* ── Footer ── */
 footer {
   background: #5dc9d3;
   font-family: Arial, Helvetica, sans-serif;
   color: white;
   font-size: 0.75em;
   font-weight: normal;
-  padding: 8px 3% 8px 3%;
-  margin: 0 auto 1% auto;
+  padding: 8px 3%;
+  margin: 0 auto 1%;
   width: 100%;
   max-width: 500px;
   text-align: center;
 }
 
-/* line 223, ../sass/master.sass */
 #rights-reserved {
   padding: 0 0.25rem 0 0;
 }
 
-/* line 227, ../sass/master.sass */
-footer #footer-address {
+footer address {
+  font-style: normal;
   font-weight: normal;
-  padding: 1% 3% 0 3%;
+  padding: 1% 3% 0;
   margin: 1pt auto auto;
   text-align: center;
 }
 
-/* line 232, ../sass/master.sass */
 footer a {
   text-decoration: none;
   color: white;
 }
 
-/* line 235, ../sass/master.sass */
 footer a:hover {
   color: #eeeeee;
+}
+
+#visit-us {
+  font-weight: normal;
 }
 
 /************************************************ */
 /**********************EOF*********************** */
 /************************************************ */
-/* Smartphones (portrait) ----------- */
-@media only screen and (max-width: 480px) {
 
+/* ── Mobile (portrait) ── */
+@media only screen and (max-width: 480px) {
   html,
   body,
   #background-wrapper,
@@ -344,12 +297,6 @@ footer a:hover {
     padding: 0;
   }
 
-  #main {
-    width: 100%;
-    padding: 0 1rem;
-    margin: 0 auto;
-  }
-
   #background-wrapper,
   #wrapper {
     width: 100%;
@@ -359,12 +306,10 @@ footer a:hover {
     padding: 0;
   }
 
-  /* line 23, ../sass/mobile.sass */
   h1 {
     font-size: 42pt;
   }
 
-  /* line 26, ../sass/mobile.sass */
   #title-line-two {
     display: inline;
   }
@@ -377,42 +322,29 @@ footer a:hover {
     white-space: nowrap;
   }
 
-  /* line 41, ../sass/mobile.sass */
   #logo {
     width: auto;
   }
 
-  /* line 44, ../sass/mobile.sass */
-  #social {
-    background-color: transparent;
-  }
-
-  /* line 47, ../sass/mobile.sass */
   footer {
     background-color: transparent;
     font-size: 0.3em;
     font-weight: normal;
     width: auto;
-    margin: auto auto;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin: 0 auto 1rem;
     text-align: center;
   }
 
-  /* line 61, ../sass/mobile.sass */
-  footer #footer-address {
+  footer address {
     padding: 0;
-    font-weight: normal;
     text-align: center;
   }
 
-  /* line 65, ../sass/mobile.sass */
   footer a {
     text-decoration: none;
     color: white;
   }
 
-  /* line 68, ../sass/mobile.sass */
   footer a:hover {
     color: #eeeeee;
   }
